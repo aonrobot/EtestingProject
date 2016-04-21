@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\BrightByte\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="C:\Users\BrightByte\Desktop\etesting project\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-e96e9f481d958ac26dbf9d8b8961616b0011caea.jar" />
+    </item>
+    <item
+        jar="C:\Users\BrightByte\Desktop\etesting project\app\build\intermediates\exploded-aar\etesting project\kioskLib\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="331fc15d5ca99dc06dd65b56663abbfd0771a486">
+        <dex dex="C:\Users\BrightByte\Desktop\etesting project\app\build\intermediates\pre-dexed\debug\classes-2a2b62dd0a392945ea40dbf97b4a648484cbb679.jar" />
+    </item>
+
+</items>
