@@ -45,6 +45,7 @@ public class EtestingFunctions{
         }
 
         wifiManager.enableNetwork(netId, true);
+        wifiManager.reconnect();
         wifiManager.startScan();
 
     }
@@ -55,10 +56,16 @@ public class EtestingFunctions{
 
         WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
         WifiInfo wifiInfo = wifiManager.getConnectionInfo();
-        Toast.makeText(context, "wifi info " + wifiInfo, Toast.LENGTH_LONG).show();
-        if (wifiInfo != null) {
-            Toast.makeText(context, "Wifiname is " + wifiInfo.getSSID(), Toast.LENGTH_LONG).show();
+
+        if (wifiInfo != null){
+
             connected = wifiInfo.getSSID().equals("\"etesting\"");
+            if(wifiInfo.getBSSID() != null)
+                if(wifiInfo.getBSSID().equals("00:00:00:00:00:00")) connected = false;
+        }
+        if(connected){
+            //Toast.makeText(context, "Wifiname is " + wifiInfo.getSSID(), Toast.LENGTH_LONG).show();
+            //Toast.makeText(context, "wifi info " + wifiInfo, Toast.LENGTH_LONG).show();
         }
         return connected;
     }

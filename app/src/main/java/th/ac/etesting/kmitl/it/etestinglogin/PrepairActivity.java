@@ -54,7 +54,10 @@ public class PrepairActivity extends AppCompatActivity {
                         func.ConnectWIFI(getApplicationContext());
                     }
 
-                }while(!ssid.equals("\"etesting\""));
+                    Thread.sleep(5000);
+
+
+                }while(!func.checkWIFI(getApplicationContext()));
 
             } catch (InterruptedException e) {
                 e.printStackTrace();
