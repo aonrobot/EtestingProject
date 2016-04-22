@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="0dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="th.ac.etesting.kmitl.it.etestinglogin.MainActivity"
+    android:background="#34495E">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1"
+        android:layout_marginTop="45dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:id="@+id/imageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="0dp"
+            android:src="@drawable/login"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tester ID"
+            android:id="@+id/textView"
+            android:textSize="16dp"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idEdt"
+            android:hint="itxxx70xxx"
+            android:autoText="false"
+            android:editable="false"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:backgroundTint="#ffffff"
+            android:textColorHint="#7c8791"
+            android:layout_marginBottom="18dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColorHighlight="#ffffff"
+            android:nestedScrollingEnabled="false"
+            android:foregroundTint="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OTP"
+            android:id="@+id/textView2"
+            android:textSize="16dp"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/otpEdt"
+            android:hint="OTP 6 Digit"
+            android:textSize="20dp"
+            android:backgroundTint="#ffffff"
+            android:textColorHint="#7c8791"
+            android:layout_marginBottom="12dp"
+            android:clickable="false"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColorHighlight="#ffffff"
+            android:textColor="#ffffff"
+            android:foregroundTint="#ffffff" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Rgister Device"
+            android:id="@+id/registerBtn"
+            android:background="#336E7B"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_weight="0.05"
+            android:enabled="true"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/cancelBtn"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
