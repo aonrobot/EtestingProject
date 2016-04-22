@@ -1,8 +1,8 @@
 package th.ac.etesting.kmitl.it.etestinglogin;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,7 +18,7 @@ import java.util.HashMap;
 
 import info.androidhive.etesting.R;
 
-public class RegisterActivity extends AppCompatActivity implements AsyncResponse {
+public class RegisterActivity extends Activity implements AsyncResponse {
 
     final EtestingFunctions func = new EtestingFunctions();
 
@@ -63,7 +63,10 @@ public class RegisterActivity extends AppCompatActivity implements AsyncResponse
     }
 
     public void processFinish(String result){
-        //Toast.makeText(getApplicationContext(),result,Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),result,Toast.LENGTH_LONG).show();
+        if(result.equals("")){
+            Toast.makeText(getApplicationContext(),"Sorry!, Server Is Down, Please Contact Administrator.",Toast.LENGTH_LONG).show();
+        }
         if(result.toLowerCase().contains("Notice".toLowerCase())){
             Toast.makeText(getApplicationContext(),"Server Error, Please Contact Administrator.",Toast.LENGTH_LONG).show();
             startActivity(new Intent(RegisterActivity.this, MainActivity.class));

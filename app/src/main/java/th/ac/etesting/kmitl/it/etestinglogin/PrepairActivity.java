@@ -1,5 +1,6 @@
 package th.ac.etesting.kmitl.it.etestinglogin;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -7,18 +8,17 @@ import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import info.androidhive.etesting.MainActivity;
 import info.androidhive.etesting.R;
 
-public class PrepairActivity extends AppCompatActivity {
+public class PrepairActivity extends Activity {
 
     final EtestingFunctions func = new EtestingFunctions();
 
-    private int splashTime = 3000;
+    private int splashTime = 500;
     private Thread thread;
 
     @Override
@@ -54,7 +54,7 @@ public class PrepairActivity extends AppCompatActivity {
                         func.ConnectWIFI(getApplicationContext());
                     }
 
-                    Thread.sleep(5000);
+                    Thread.sleep(3000);
 
 
                 }while(!func.checkWIFI(getApplicationContext()));

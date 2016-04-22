@@ -1,5 +1,6 @@
 package info.androidhive.etesting;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
@@ -16,7 +17,8 @@ public class PrepareActivity extends Activity {
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                KioskActivity.startKioskActivity(PrepareActivity.this, MainActivity.class);
+                startActivity(new Intent(PrepareActivity.this, MainActivity.class));
+                //KioskActivity.startKioskActivity(PrepareActivity.this, MainActivity.class);
             }
         });
 

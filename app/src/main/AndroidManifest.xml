@@ -12,9 +12,8 @@
     <uses-permission android:name="android.permission.REORDER_TASKS" />
     <uses-permission android:name="android.permission.GET_TASKS" />
 
-    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
@@ -29,24 +28,22 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-
     <application
         android:name="th.ac.etesting.kmitl.it.etestinglogin.VarSession"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
         <activity
-            android:name=".PrepareActivity"
+            android:name="info.androidhive.etesting.PrepareActivity"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-
-            </intent-filter>
         </activity>
+
+
         <activity
-            android:name=".MainActivity"
+            android:name="info.androidhive.etesting.MainActivity"
             android:enabled="false"
             android:label="@string/kiosk_activity"
             android:launchMode="singleTask"
@@ -63,14 +60,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="th.ac.etesting.kmitl.it.etestinglogin.MainActivity">
 
-        </activity>
+        <activity android:name="th.ac.etesting.kmitl.it.etestinglogin.MainActivity"></activity>
+
         <activity
             android:name="th.ac.etesting.kmitl.it.etestinglogin.RegisterActivity"
             android:label="@string/title_activity_register"
-            android:parentActivityName="th.ac.etesting.kmitl.it.etestinglogin.RegisterActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:parentActivityName="th.ac.etesting.kmitl.it.etestinglogin.RegisterActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="th.ac.etesting.kmitl.it.etestinglogin.RegisterActivity" />
