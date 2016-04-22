@@ -14,13 +14,7 @@ public class PrepareActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prepare);
 
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(PrepareActivity.this, MainActivity.class));
-                //KioskActivity.startKioskActivity(PrepareActivity.this, MainActivity.class);
-            }
-        });
+
 
     }
 

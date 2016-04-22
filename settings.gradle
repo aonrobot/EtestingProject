@@ -1,1 +1,1 @@
-include ':app', 'kioskLib'
+include 'kioskLib', ':app', ':kioskLib'

@@ -18,6 +18,10 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+
+
     <!-- you need this to check if wifi is enabled -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
@@ -47,9 +51,12 @@
             android:enabled="false"
             android:label="@string/kiosk_activity"
             android:launchMode="singleTask"
-            android:stateNotNeeded="true" >
+            android:stateNotNeeded="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 

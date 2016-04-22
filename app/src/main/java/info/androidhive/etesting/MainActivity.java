@@ -5,19 +5,29 @@ import info.androidhive.etesting.model.NavDrawerItem;
 
 import java.util.ArrayList;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.app.KeyguardManager;
+import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.graphics.PixelFormat;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
@@ -44,7 +54,51 @@ public class MainActivity extends RootKioskActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+
+
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
+
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+
+		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 		setContentView(R.layout.activity_main);
+
+
+		if (getIntent().getBooleanExtra("EXIT", false)) {
+			finish();
+		}
+
+
+		WindowManager manager = ((WindowManager) getApplicationContext()
+				.getSystemService(Context.WINDOW_SERVICE));
+
+		WindowManager.LayoutParams localLayoutParams = new WindowManager.LayoutParams();
+		localLayoutParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
+		localLayoutParams.gravity = Gravity.TOP;
+		localLayoutParams.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE|
+
+				// this is to enable the notification to recieve touch events
+				WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL |
+
+				// Draws over status bar
+				WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN;
+
+		localLayoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
+		localLayoutParams.height = (int) (50 * getResources()
+				.getDisplayMetrics().scaledDensity);
+		localLayoutParams.format = PixelFormat.TRANSPARENT;
+
+		customViewGroup view = new customViewGroup(this);
+
+		manager.addView(view, localLayoutParams);
+
+
+
+
 
 		mTitle = mDrawerTitle = getTitle();
 
@@ -67,12 +121,7 @@ public class MainActivity extends RootKioskActivity {
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
 		// Photos
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1)));
-		// Communities, Will add a counter here
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1), true, "22"));
-		// Pages
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
-		// What's hot, We  will add a counter here
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1), true, "50+"));
+
 		
 
 		// Recycle the typed array
@@ -116,6 +165,9 @@ public class MainActivity extends RootKioskActivity {
 		}
 	}
 
+
+
+
 	/**
 	 * Slide menu item click listener
 	 * */
@@ -128,7 +180,37 @@ public class MainActivity extends RootKioskActivity {
 			displayView(position);
 		}
 	}
+	/////////////////
 
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			return false;
+		}
+		if (keyCode == KeyEvent.KEYCODE_MENU) {
+//Do Code Here
+// If want to block just return false
+			return false;
+		}
+		if (keyCode == KeyEvent.KEYCODE_HOME) {
+//Do Code Here
+// If want to block just return false
+			return false;
+		}
+		if (keyCode == KeyEvent.KEYCODE_SEARCH) {
+//Do Code Here
+// If want to block just return false
+			return false;
+		}
+		if (keyCode == KeyEvent.KEYCODE_SETTINGS) {
+//Do Code Here
+// If want to block just return false
+			return false;
+		}
+		return super.onKeyDown(keyCode, event);
+	}
+/////////////////////////////
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.main, menu);
@@ -177,15 +259,6 @@ public class MainActivity extends RootKioskActivity {
 		case 2:
 			fragment = new PhotosFragment();
 			break;
-		case 3:
-			fragment = new CommunityFragment();
-			break;
-		case 4:
-			fragment = new PagesFragment();
-			break;
-		case 5:
-			fragment = new WhatsHotFragment();
-			break;
 
 		default:
 			break;
@@ -230,6 +303,25 @@ public class MainActivity extends RootKioskActivity {
 		super.onConfigurationChanged(newConfig);
 		// Pass any configuration change to the drawer toggls
 		mDrawerToggle.onConfigurationChanged(newConfig);
+	}
+
+
+////////////////////disable notification bar
+	public class customViewGroup extends ViewGroup {
+
+		public customViewGroup(Context context) {
+			super(context);
+		}
+
+		@Override
+		protected void onLayout(boolean changed, int l, int t, int r, int b) {
+		}
+
+		@Override
+		public boolean onInterceptTouchEvent(MotionEvent ev) {
+			Log.v("customViewGroup", "**********Intercepted");
+			return true;
+		}
 	}
 
 }
