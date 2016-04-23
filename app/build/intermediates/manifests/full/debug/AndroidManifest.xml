@@ -31,7 +31,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="info.androidhive.etesting.PrepareActivity"
+            android:name="info.androidhive.etesting.EndActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -64,6 +64,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="th.ac.etesting.kmitl.it.etestinglogin.RegisterActivity" />
         </activity>
+        <activity android:name="th.ac.etesting.kmitl.it.etestinglogin.Exit" />
     </application>
 
 </manifest>

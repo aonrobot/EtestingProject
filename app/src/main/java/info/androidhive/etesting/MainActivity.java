@@ -2,8 +2,11 @@ package info.androidhive.etesting;
 
 import info.androidhive.etesting.adapter.NavDrawerListAdapter;
 import info.androidhive.etesting.model.NavDrawerItem;
+import th.ac.etesting.kmitl.it.etestinglogin.EtestingFunctions;
+import th.ac.etesting.kmitl.it.etestinglogin.VarSession;
 
 import java.util.ArrayList;
+import java.util.jar.Manifest;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -11,6 +14,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.KeyguardManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.PixelFormat;
@@ -30,6 +34,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.wroclawstudio.kioskmode.RootKioskActivity;
 
@@ -51,12 +56,25 @@ public class MainActivity extends RootKioskActivity {
 	private ArrayList<NavDrawerItem> navDrawerItems;
 	private NavDrawerListAdapter adapter;
 
+    final EtestingFunctions func = new EtestingFunctions();
+
+    public String tid = "";
+    public String tpass = "";
+    public Context context;
+
+    public String getTid(){
+        return tid;
+    }
+    public  String getTpass(){
+        return tpass;
+    }
+    public Context getContext(){
+        return context;
+    }
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
-
-
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
@@ -66,6 +84,15 @@ public class MainActivity extends RootKioskActivity {
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		setContentView(R.layout.activity_main);
+
+        context = getApplicationContext();
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        final VarSession session = (VarSession)getApplicationContext();
+        tid = session.getTesterId();
+        tpass = session.getTesterId()+ session.getOtp()+func.getIMEI(getApplicationContext())+session.getPrivateKey();
+        Log.i("Password => ",session.getTesterId()+ session.getOtp()+func.getIMEI(getApplicationContext())+session.getPrivateKey());
 
 
 		if (getIntent().getBooleanExtra("EXIT", false)) {
@@ -257,7 +284,11 @@ public class MainActivity extends RootKioskActivity {
 			fragment = new FindPeopleFragment();
 			break;
 		case 2:
-			fragment = new PhotosFragment();
+			//fragment = new PhotosFragment();
+            Intent i = new Intent(MainActivity.this,EndActivity.class);
+            i.putExtra("tid", tid);
+            startActivity(i);
+            //startActivity(new Intent(MainActivity.this, EndActivity.class));
 			break;
 
 		default:

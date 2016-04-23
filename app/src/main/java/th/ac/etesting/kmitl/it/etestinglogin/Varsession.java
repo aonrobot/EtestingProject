@@ -12,7 +12,7 @@ public class VarSession extends Application{
 
     public String password="", private_key;
 
-    public String testerId="", testId="";
+    public String testerId="", testId="", otp="";
 
     public String getPassword(){
         return password;
@@ -30,8 +30,7 @@ public class VarSession extends Application{
         private_key = _private;
     }
 
-    //Tester get set
-    /*
+
     public String getTesterId(){
         return testerId;
     }
@@ -44,7 +43,14 @@ public class VarSession extends Application{
     }
     public void setTestId(String _id){
         testId = _id;
-    }*/
+    }
+
+    public String getOtp(){
+        return otp;
+    }
+    public void setOtp(String _otp){
+        otp = _otp;
+    }
 
 }
 

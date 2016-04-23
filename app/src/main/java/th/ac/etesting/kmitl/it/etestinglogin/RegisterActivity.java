@@ -3,6 +3,7 @@ package th.ac.etesting.kmitl.it.etestinglogin;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,6 +39,8 @@ public class RegisterActivity extends Activity implements AsyncResponse {
         final VarSession session = (VarSession)getApplicationContext();
         //Toast.makeText(getApplicationContext(), "private_key => "+session.getPrivateKey(), Toast.LENGTH_LONG).show();
 
+
+
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,6 +51,10 @@ public class RegisterActivity extends Activity implements AsyncResponse {
                 postData.put("otp", otpEdt.getText().toString());
                 postData.put("imei", func.getIMEI(getApplicationContext()));
                 postData.put("private", session.getPrivateKey());
+
+                //Keep Tester Id and OTP
+                session.setTesterId(idEdt.getText().toString().trim());
+                session.setOtp(otpEdt.getText().toString().trim());
 
                 PostResponseAsyncTask registerTask = new PostResponseAsyncTask(RegisterActivity.this, postData);
                 registerTask.execute("http://192.168.1.131/eexam/tester/tester.register.php");
@@ -63,7 +70,8 @@ public class RegisterActivity extends Activity implements AsyncResponse {
     }
 
     public void processFinish(String result){
-        Toast.makeText(getApplicationContext(),result,Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(),result,Toast.LENGTH_LONG).show();
+        Log.i("Register",result);
         if(result.equals("")){
             Toast.makeText(getApplicationContext(),"Sorry!, Server Is Down, Please Contact Administrator.",Toast.LENGTH_LONG).show();
         }
@@ -83,7 +91,7 @@ public class RegisterActivity extends Activity implements AsyncResponse {
             if(status.equals("yes")){
                 final VarSession session = (VarSession)getApplicationContext();
                 session.setPassword(login_password.toString().trim());
-                //session.setTesterId(testerId.toString().trim());
+
                 //session.setTestId(testId.toString().trim());
 
                 startActivity(new Intent(RegisterActivity.this, MainActivity.class));
