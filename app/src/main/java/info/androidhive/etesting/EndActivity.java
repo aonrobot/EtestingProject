@@ -60,7 +60,8 @@ public class EndActivity extends KioskActivity implements AsyncResponse{
             String status = reader.getString("status");
 
             if(status.equals("yes")){
-                startActivity(new Intent(EndActivity.this, th.ac.etesting.kmitl.it.etestinglogin.MainActivity.class));
+                startActivity(new Intent(EndActivity.this, th.ac.etesting.kmitl.it.etestinglogin.MainActivity
+                        .class));
                 finish();
             }
             else{
