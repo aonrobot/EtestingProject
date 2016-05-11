@@ -1,3 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="E:\Work\Programming\Android\1Project\EtestingProject\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="E:\Work\Programming\Android\1Project\EtestingProject\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0_f3be549927d4e550a0c906ade4982f485edf0175.jar" />
+    </item>
+    <item
+        jar="E:\Work\Programming\Android\1Project\EtestingProject\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="E:\Work\Programming\Android\1Project\EtestingProject\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.0.0_398db010f812f134ef86e87d9d0b6a7c8a0fe5bf.jar" />
+    </item>
+    <item
+        jar="E:\Work\Programming\Android\1Project\EtestingProject\app\build\intermediates\exploded-aar\EtestingProject\kioskLib\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="bcafb04743004e586d44515c2d93ae26aa3f6a59">
+        <dex dex="E:\Work\Programming\Android\1Project\EtestingProject\app\build\intermediates\pre-dexed\debug\EtestingProject-kioskLib-unspecified_8f16452b0694f4087a9f4a74a7cebf5d7cb956c0.jar" />
+    </item>
+    <item
+        jar="E:\Work\Programming\Android\1Project\EtestingProject\app\libs\GenAsync.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8daded3af3a8f0956cadaab263229c5d1508242c">
+        <dex dex="E:\Work\Programming\Android\1Project\EtestingProject\app\build\intermediates\pre-dexed\debug\GenAsync_70ef89860603d0a18926b5e525aa094a704393f2.jar" />
+    </item>
+    <item
+        jar="C:\Users\PaRaganDa\.android-sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="E:\Work\Programming\Android\1Project\EtestingProject\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.0_3d766186e4db0f8c18a0ea9082cbd84156b8b5d3.jar" />
+    </item>
+    <item
+        jar="E:\Work\Programming\Android\1Project\EtestingProject\app\build\intermediates\exploded-aar\pl.droidsonroids.gif\android-gif-drawable\1.1.7\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d6825a79ca6c134dd6f26fc15eff443b5215dbdc">
+        <dex dex="E:\Work\Programming\Android\1Project\EtestingProject\app\build\intermediates\pre-dexed\debug\pl.droidsonroids.gif-android-gif-drawable-1.1.7_ddabd2bd4171ec64327c60848687e2d12bbaa905.jar" />
+    </item>
+    <item
+        jar="E:\Work\Programming\Android\1Project\EtestingProject\app\libs\core-3.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e019d15a13a9786f881141d2df6654b8510bce8b">
+        <dex dex="E:\Work\Programming\Android\1Project\EtestingProject\app\build\intermediates\pre-dexed\debug\core-3.2.0_68ccaeff5c26183c1d52b0cd2f7ae0c098c28f7f.jar" />
+    </item>
+
+</items>

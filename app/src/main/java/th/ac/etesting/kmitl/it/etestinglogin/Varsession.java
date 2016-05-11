@@ -14,6 +14,8 @@ public class VarSession extends Application{
 
     public String testerId="", testId="", otp="";
 
+    public String registerServerIp = "http://192.168.1.101/";
+
     public String getPassword(){
         return password;
     }
@@ -50,6 +52,10 @@ public class VarSession extends Application{
     }
     public void setOtp(String _otp){
         otp = _otp;
+    }
+
+    public String getRegisterServerIp(){
+        return registerServerIp;
     }
 
 }

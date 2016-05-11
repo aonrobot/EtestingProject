@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="it.kmitl.etesting.test">
+    package="th.ac.etesting.kmitl.it.etestinglogin.test">
 
     <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="18" />
 
@@ -9,8 +9,8 @@
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="it.kmitl.etesting"
+                     android:targetPackage="th.ac.etesting.kmitl.it.etestinglogin"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for it.kmitl.etesting"/>
+                     android:label="Tests for th.ac.etesting.kmitl.it.etestinglogin"/>
 </manifest>

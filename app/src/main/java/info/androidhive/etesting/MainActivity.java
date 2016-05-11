@@ -3,6 +3,7 @@ package info.androidhive.etesting;
 import info.androidhive.etesting.adapter.NavDrawerListAdapter;
 import info.androidhive.etesting.model.NavDrawerItem;
 import th.ac.etesting.kmitl.it.etestinglogin.EtestingFunctions;
+import th.ac.etesting.kmitl.it.etestinglogin.R;
 import th.ac.etesting.kmitl.it.etestinglogin.VarSession;
 
 import java.util.ArrayList;

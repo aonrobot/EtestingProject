@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:2:1-86:12
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:2:1-102:12
 	package
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:3:5-40
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:3:5-52
 		INJECTED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml
 		INJECTED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -17,6 +17,7 @@ ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\And
 		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:23.0.0] E:\Work\Programming\Android\1Project\EtestingProject\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:20:5-43
 MERGED from [EtestingProject:kioskLib:unspecified] E:\Work\Programming\Android\1Project\EtestingProject\app\build\intermediates\exploded-aar\EtestingProject\kioskLib\unspecified\AndroidManifest.xml:5:5-7:41
 MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.1.7] E:\Work\Programming\Android\1Project\EtestingProject\app\build\intermediates\exploded-aar\pl.droidsonroids.gif\android-gif-drawable\1.1.7\AndroidManifest.xml:6:5-8:41
 	android:targetSdkVersion
@@ -79,80 +80,99 @@ uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:33:5-81
 	android:name
 		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:33:22-78
+uses-permission#android.permission.CAMERA
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:35:5-65
+	android:name
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:35:22-62
 application
-ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:35:5-84:19
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:39:5-100:19
+MERGED from [com.android.support:support-v4:23.0.0] E:\Work\Programming\Android\1Project\EtestingProject\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:22:5-20
 MERGED from [EtestingProject:kioskLib:unspecified] E:\Work\Programming\Android\1Project\EtestingProject\app\build\intermediates\exploded-aar\EtestingProject\kioskLib\unspecified\AndroidManifest.xml:9:5-12:19
 	android:label
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:39:9-41
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:43:9-41
 	android:allowBackup
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:37:9-35
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:41:9-35
 	android:icon
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:38:9-45
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:42:9-45
 	android:theme
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:40:9-40
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:44:9-50
 	android:name
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:36:9-72
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:40:9-72
 activity#info.androidhive.etesting.EndActivity
-ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:42:9-46:20
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:46:9-50:20
 	android:label
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:44:13-45
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:48:13-45
 	android:name
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:43:13-40
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:47:13-65
 activity#info.androidhive.etesting.MainActivity
-ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:49:9-61:20
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:53:9-65:20
 	android:enabled
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:51:13-36
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:55:13-36
 	android:label
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:52:13-51
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:56:13-51
 	android:stateNotNeeded
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:54:13-42
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:58:13-42
 	android:launchMode
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:53:13-44
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:57:13-44
 	android:name
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:50:13-66
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:54:13-66
 intent-filter#android.intent.action.MAIN+android.intent.category.DEFAULT+android.intent.category.HOME
-ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:55:13-60:29
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:59:13-64:29
 action#android.intent.action.MAIN
-ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:56:17-69
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:60:17-69
 	android:name
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:56:25-66
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:60:25-66
 category#android.intent.category.HOME
-ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:57:17-73
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:61:17-73
 	android:name
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:57:27-70
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:61:27-70
 category#android.intent.category.DEFAULT
-ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:59:17-76
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:63:17-76
 	android:name
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:59:27-73
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:63:27-73
 activity#th.ac.etesting.kmitl.it.etestinglogin.PrepairActivity
-ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:63:9-69:20
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:69:9-75:20
 	android:name
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:63:19-87
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:69:19-87
 intent-filter#android.intent.action.MAIN+android.intent.category.DEFAULT+android.intent.category.LAUNCHER
-ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:64:13-68:29
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:70:13-74:29
 category#android.intent.category.LAUNCHER
-ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:66:17-77
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:72:17-77
 	android:name
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:66:27-74
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:72:27-74
 activity#th.ac.etesting.kmitl.it.etestinglogin.MainActivity
-ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:71:9-96
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:77:9-96
 	android:name
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:71:19-84
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:77:19-84
 activity#th.ac.etesting.kmitl.it.etestinglogin.RegisterActivity
-ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:73:9-80:20
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:79:9-87:20
 	android:label
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:75:13-60
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:81:13-60
 	android:parentActivityName
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:76:13-96
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:82:13-58
 	android:name
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:74:13-82
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:80:13-82
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:77:13-79:90
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:84:13-86:90
 	android:value
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:79:17-87
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:86:17-87
 	android:name
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:78:17-63
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:85:17-63
 activity#th.ac.etesting.kmitl.it.etestinglogin.Exit
-ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:82:9-88
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:89:9-88
 	android:name
-		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:82:19-76
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:89:19-76
+activity#com.journeyapps.barcodescanner.CaptureActivity
+ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:92:9-98:63
+	android:clearTaskOnLaunch
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:94:13-45
+	android:screenOrientation
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:95:13-56
+	android:stateNotNeeded
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:96:13-42
+	android:windowSoftInputMode
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:98:13-60
+	android:theme
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:97:13-54
+	android:name
+		ADDED from E:\Work\Programming\Android\1Project\EtestingProject\app\src\main\AndroidManifest.xml:93:13-74

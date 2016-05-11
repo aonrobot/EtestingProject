@@ -11,16 +11,36 @@
         <item>Boogie Board</item>
         <item>Exit Test</item>
     </string-array>
-    <color name="counter_text_bg">#626262</color>
-    <color name="counter_text_color">#c5c4c4</color>
+    <color name="counter_text_bg">#e17968</color>
+    <color name="counter_text_color">#f3aa36</color>
     <color name="list_background">#303030</color>
     <color name="list_background_pressed">#992416</color>
     <color name="list_divider">#272727</color>
     <color name="list_item_title">#fff</color>
+    <color name="zxing_custom_possible_result_points">#903A89CF</color>
+    <color name="zxing_custom_result_view">#b0000000</color>
+    <color name="zxing_custom_viewfinder_laser">#1976D2</color>
+    <color name="zxing_custom_viewfinder_mask">#60000000</color>
+    <color name="zxing_possible_result_points">#c0ffbd21</color>
+    <color name="zxing_result_view">#b0000000</color>
+    <color name="zxing_status_text">#ffffffff</color>
+    <color name="zxing_transparent">#00000000</color>
+    <color name="zxing_viewfinder_laser">#ffcc0000</color>
+    <color name="zxing_viewfinder_mask">#60000000</color>
     <declare-styleable name="GifTextureView"><attr format="reference|string" name="gifSource"/><attr format="boolean" name="isOpaque"/></declare-styleable>
     <declare-styleable name="GifView"><attr format="boolean" name="freezesAnimation"/></declare-styleable>
+    <declare-styleable name="zxing_camera_preview"><attr format="dimension" name="zxing_framing_rect_width"/><attr format="dimension" name="zxing_framing_rect_height"/><attr format="boolean" name="zxing_use_texture_view"/></declare-styleable>
+    <declare-styleable name="zxing_finder"><attr format="color" name="zxing_possible_result_points"/><attr format="color" name="zxing_result_view"/><attr format="color" name="zxing_viewfinder_laser"/><attr format="color" name="zxing_viewfinder_mask"/></declare-styleable>
+    <declare-styleable name="zxing_view"><attr format="reference" name="zxing_scanner_layout"/></declare-styleable>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <item name="zxing_back_button" type="id"/>
+    <item name="zxing_camera_error" type="id"/>
+    <item name="zxing_decode" type="id"/>
+    <item name="zxing_decode_failed" type="id"/>
+    <item name="zxing_decode_succeeded" type="id"/>
+    <item name="zxing_possible_result_points" type="id"/>
+    <item name="zxing_prewiew_size_ready" type="id"/>
     <string name="action_settings">Settings</string>
     <string name="app_name">E-testing</string>
     <string name="desc_list_item_icon">Item Icon</string>
@@ -31,6 +51,10 @@
     <string name="title_activity_etesting_functions">EtestingFunctions</string>
     <string name="title_activity_prepare">PrepareActivity</string>
     <string name="title_activity_register">Register</string>
+    <string name="zxing_app_name">Barcode Scanner</string>
+    <string name="zxing_button_ok">OK</string>
+    <string name="zxing_msg_camera_framework_bug">Sorry, the Android camera encountered a problem. You may need to restart the device.</string>
+    <string name="zxing_msg_default_status">Place a barcode inside the viewfinder rectangle to scan it.</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
@@ -44,4 +68,6 @@
 
 
     </style>
+    <style name="zxing_CaptureTheme" parent="android:Theme.Black.NoTitleBar.Fullscreen">
+  </style>
 </resources>

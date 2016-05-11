@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import th.ac.etesting.kmitl.it.etestinglogin.EtestingFunctions;
+import th.ac.etesting.kmitl.it.etestinglogin.R;
 import th.ac.etesting.kmitl.it.etestinglogin.VarSession;
 
 public class HomeFragment extends Fragment {
@@ -37,9 +38,15 @@ public class HomeFragment extends Fragment {
         mWebView.getSettings().setDomStorageEnabled(true);
         mWebView.getSettings().setJavaScriptEnabled(true);
 
+        /*mWebView.getSettings().setLoadWithOverviewMode(true);
+        mWebView.getSettings().setUseWideViewPort(true);
+        mWebView.getSettings().setBuiltInZoomControls(true);
+        mWebView.getSettings().setPluginState(WebSettings.PluginState.ON);*/
+
+        //mWebView.getSettings().setDefaultZoom(WebSettings.ZoomDensity.FAR);
+
         mWebView.loadUrl("http://192.168.1.115/tao/Main/login");
 
-        mWebView.getSettings().setDefaultZoom(WebSettings.ZoomDensity.FAR);
 
         mWebView.setWebViewClient(new WebViewClient() {
             public void onPageFinished(WebView view, String url) {

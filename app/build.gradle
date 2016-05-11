@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 18
+    compileSdkVersion 23
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "it.kmitl.etesting"
+        applicationId "th.ac.etesting.kmitl.it.etestinglogin"
         minSdkVersion 11
         targetSdkVersion 18
     }
@@ -19,10 +19,9 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:18.0.0'
+    compile 'com.android.support:support-v4:23.0.0'
     compile project(':kioskLib')
-
-
     compile files('libs/GenAsync.jar')
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'
+    compile files('libs/core-3.2.0.jar')
 }

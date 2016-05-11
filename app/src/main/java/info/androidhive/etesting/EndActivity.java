@@ -18,6 +18,9 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.jar.Manifest;
 
+import th.ac.etesting.kmitl.it.etestinglogin.R;
+import th.ac.etesting.kmitl.it.etestinglogin.VarSession;
+
 public class EndActivity extends KioskActivity implements AsyncResponse{
 
     public String tid;
@@ -33,6 +36,8 @@ public class EndActivity extends KioskActivity implements AsyncResponse{
 
         //Toast.makeText(getApplicationContext(), tid, Toast.LENGTH_LONG).show();
 
+        final VarSession session = (VarSession)getApplicationContext();
+
         endBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,7 +47,7 @@ public class EndActivity extends KioskActivity implements AsyncResponse{
                 postData.put("testerId", tid);
 
                 PostResponseAsyncTask registerTask = new PostResponseAsyncTask(EndActivity.this, postData);
-                registerTask.execute("http://192.168.1.131/eexam/tester/tester.end.php");
+                registerTask.execute(session.getRegisterServerIp()+"eexam/tester/tester.end.php");
             }
         });
 
@@ -60,8 +65,9 @@ public class EndActivity extends KioskActivity implements AsyncResponse{
             String status = reader.getString("status");
 
             if(status.equals("yes")){
-                startActivity(new Intent(EndActivity.this, th.ac.etesting.kmitl.it.etestinglogin.MainActivity
-                        .class));
+                final VarSession session = (VarSession)getApplicationContext();
+                session.setPassword("");
+                startActivity(new Intent(EndActivity.this, th.ac.etesting.kmitl.it.etestinglogin.MainActivity.class));
                 finish();
             }
             else{

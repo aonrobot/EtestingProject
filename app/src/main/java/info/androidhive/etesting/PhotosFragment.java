@@ -15,6 +15,8 @@ import com.kosalgeek.asynctask.PostResponseAsyncTask;
 
 import java.util.HashMap;
 
+import th.ac.etesting.kmitl.it.etestinglogin.R;
+
 public class PhotosFragment extends Fragment {
 	
 	public PhotosFragment(){}

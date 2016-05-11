@@ -17,9 +17,8 @@ import com.wroclawstudio.kioskmode.KioskActivity;
 
 import java.util.HashMap;
 
-import info.androidhive.etesting.R;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements AsyncResponse{
 
     final EtestingFunctions func = new EtestingFunctions();
 
@@ -83,6 +82,13 @@ public class MainActivity extends Activity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                HashMap<String, String> postData = new HashMap<String, String>();
+                postData.put("testerId", session.getTesterId());
+
+                PostResponseAsyncTask updaeStatus = new PostResponseAsyncTask(MainActivity.this, postData);
+                updaeStatus.execute(session.getRegisterServerIp()+"eexam/tester/tester.update_status.php");
+
                 KioskActivity.startKioskActivity(th.ac.etesting.kmitl.it.etestinglogin.MainActivity.this, info.androidhive.etesting.MainActivity.class);
             }
         });
@@ -122,5 +128,10 @@ public class MainActivity extends Activity {
             registerBtn.setVisibility(View.GONE);
             loginBtn.setVisibility(View.VISIBLE);//loginBtn.setEnabled(true);
         }
+    }
+
+    @Override
+    public void processFinish(String s) {
+
     }
 }

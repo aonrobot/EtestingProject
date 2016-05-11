@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import th.ac.etesting.kmitl.it.etestinglogin.R;
+
 public class FindPeopleFragment extends Fragment {
 	
 	public FindPeopleFragment(){}

@@ -12,7 +12,6 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import info.androidhive.etesting.MainActivity;
-import info.androidhive.etesting.R;
 
 public class PrepairActivity extends Activity {
 
